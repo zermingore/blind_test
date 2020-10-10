@@ -1,0 +1,12 @@
+-*- mode: org -*-
+
+* TODO Init
+** TODO Graphics library (SFML / Dear ImGui?)
+** TODO Translations (SQL?)
+** TODO Multi-Platform compliant
+
+
+* TODO Features
+** TODO Image Tests
+*** TODO half of the screen
+*** TODO Animations
