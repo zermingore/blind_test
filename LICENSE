@@ -1,0 +1,8 @@
+The code in the lib/imgui folder comes from the Dear ImGui project, written by Omar Orconut
+https://github.com/ocornut/imgui/blob/master/LICENSE.txt
+This code was slightly modified in order to bind Dear ImGui with the SFML
+imconfig-SFML.h to ImGui’s imconfig.h
+
+
+The code in the lib/imgui-sfml folder comes from the Dear ImGui bindings for SFML, written by Elias Daler
+https://github.com/eliasdaler/imgui-sfml
