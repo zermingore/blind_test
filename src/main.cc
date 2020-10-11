@@ -25,9 +25,12 @@ int main()
 
   sf::Color bgColor = { 0, 255, 0 };
   sf::Color focusPointColor = { 255, 0, 0 };
+  sf::Vector2f focusPointPos = { 30.f, 30.f };
 
   float color[3] = { 0.f, 1.f, 0.f };
   float colorPoint[3] = { 1.f, 0.f, 0.f };
+  float pointSize = 30.f;
+  float pointSpeed = 1.f;
 
   sf::Clock deltaClock;
   while (window.isOpen())
@@ -44,8 +47,10 @@ int main()
     }
 
     focusPoint.setFillColor(focusPointColor);
-    focusPoint.setPosition((static_cast<int> (focusPoint.getPosition().y) + 1) % window.getSize().x,
-                           (static_cast<int> (focusPoint.getPosition().y) + 1) % window.getSize().y);
+    focusPoint.setPosition(static_cast<int> (focusPoint.getPosition().y + pointSpeed) % window.getSize().x,
+                           static_cast<int> (focusPoint.getPosition().y + pointSpeed) % window.getSize().y);
+    focusPoint.setRadius(pointSize);
+
 
     ImGui::SFML::Update(window, deltaClock.restart());
 
@@ -67,6 +72,9 @@ int main()
       focusPointColor.g = static_cast<sf::Uint8>(colorPoint[1] * 255.f);
       focusPointColor.b = static_cast<sf::Uint8>(colorPoint[2] * 255.f);
     }
+
+    ImGui::SliderFloat("Point size", &pointSize, 1.f, 30.f);
+    ImGui::SliderFloat("Point speed", &pointSpeed, 1.f, 10.f);
 
     ImGui::End();
 
