@@ -4,9 +4,19 @@
 ** TODO Graphics library (SFML / Dear ImGui?)
 ** TODO Translations (SQL?)
 ** TODO Multi-Platform compliant
+** TODO Build system
+*** TODO avoid patching sub-modules
+*** TODO don't rebuild everything
 
 
 * TODO Features
 ** TODO Image Tests
 *** TODO half of the screen
 *** TODO Animations
+
+
+* TODO Tools
+** DONE Live background color editing
+   CLOSED: [2020-10-11 Sun 14:08]
+** TODO Live point color / position editing
+** TODO Live edit fraction of the screen; color of the different parts
