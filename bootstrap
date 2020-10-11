@@ -1,0 +1,7 @@
+#!/bin/sh
+
+
+git submodule update --init
+
+cd lib/imgui
+git am ../0001-Libs-Added-imgui-sfml-bindings-in-imgui.patch

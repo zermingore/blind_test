@@ -3,3 +3,12 @@ This tool is *NOT* in any form a replacement for medical consultation.
 
 The name 'Blind Test' comes from musical blind test where one needs to recognize a song.
 Here the goal is to recognize visual patterns.
+
+
+
+Required packages
+libsfml-dev
+
+
+Build
+run the bootstrap script (update and patch sub-modules)
