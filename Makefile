@@ -5,7 +5,9 @@ SRC = lib/imgui/imgui.cpp \
       lib/imgui/imgui_widgets.cpp \
       lib/imgui-sfml/imgui-SFML.cpp \
       lib/imgui/imgui_demo.cpp \
-      src/main.cc
+      \
+      src/main.cc \
+      src/InputsManager.cc
 
 
 INC=-Ilib/imgui -Ilib/imgui-sfml
@@ -16,6 +18,7 @@ CXX ?= g++
 
 
 CXXFLAGS += -O0 -g3 -ggdb3 -DDEBUG
+CXXFLAGS += -lpthread # Warning: Platform dependent
 
 # CXXFLAGS += -Wall                              # Enable most warning messages
 # CXXFLAGS += -Wextra                            # Print extra (possibly unwanted) warnings

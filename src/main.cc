@@ -1,4 +1,5 @@
 #include <iostream>
+#include <future>
 
 #include "imgui.h"
 #include "imgui-SFML.h"
@@ -8,10 +9,20 @@
 #include <SFML/System/Clock.hpp>
 #include <SFML/Window/Event.hpp>
 
+#include "InputsManager.hh"
+
 
 
 int main()
 {
+  std::atomic_bool stop_events_listener{false};
+  auto inputs = std::async(
+    std::launch::async,
+    InputsManager::listen,
+    std::ref(stop_events_listener)
+  );
+
+
   sf::RenderWindow window(sf::VideoMode(640, 480), "BlindTest");
   window.setFramerateLimit(60);
   window.setVerticalSyncEnabled(true);
