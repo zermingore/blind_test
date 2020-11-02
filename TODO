@@ -1,8 +1,8 @@
 -*- mode: org -*-
 
 * TODO Init
-** TODO Graphics library (SFML / Dear ImGui?)
-** TODO Translations (SQL?)
+** DONE Graphics library (SFML / Dear ImGui?)
+   CLOSED: [2020-11-02 Mon 08:56]
 ** TODO Multi-Platform compliant
 ** TODO Build system
 *** TODO avoid patching sub-modules
@@ -13,6 +13,8 @@
 ** TODO Image Tests
 *** TODO half of the screen
 *** TODO Animations
+** TODO Translations (SQL?)
+** TODO React to user's inputs
 
 
 * TODO Tools
