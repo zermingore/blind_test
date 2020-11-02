@@ -1,0 +1,5 @@
+README    # Short documentation
+Makefile  # Build system
+src/      # Own sources
+src/lib/  # External libraries
+TODO      # ToDo list
