@@ -7,7 +7,8 @@ SRC = lib/imgui/imgui.cpp \
       lib/imgui/imgui_demo.cpp \
       \
       src/main.cc \
-      src/InputsManager.cc
+      src/InputsManager.cc \
+      src/GraphicsEngine.cc
 
 
 INC=-Ilib/imgui -Ilib/imgui-sfml
