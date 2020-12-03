@@ -8,10 +8,13 @@ SRC = lib/imgui/imgui.cpp \
       \
       src/main.cc \
       src/InputsManager.cc \
-      src/GraphicsEngine.cc
+      src/GraphicsEngine.cc \
+      \
+      src/tools/Debug.cc \
+      src/tools/Random.cc
 
 
-INC=-Ilib/imgui -Ilib/imgui-sfml
+INC=-Isrc -Ilib/imgui -Ilib/imgui-sfml
 
 
 CXX ?= g++
@@ -111,4 +114,4 @@ CXXFLAGS += -lpthread # Warning: Platform dependent
 
 
 all:
-	$(CXX) --std=c++17 -o $(bin) $(CXXFLAGS) $(SRC) $(INC) $(shell pkg-config --libs gl sfml-graphics)
+	$(CXX) --std=c++17 -o $(bin) $(CXXFLAGS) $(SRC) $(INC) $(shell pkg-config --libs gl sfml-graphics) -lstdc++fs
