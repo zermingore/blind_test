@@ -3,3 +3,9 @@ imgui.ini
 
 # Editors
 .vscode
+
+# Build system
+cmake_install.cmake
+CMakeFiles/
+CMakeCache.txt
+# Makefile

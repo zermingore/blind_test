@@ -6,7 +6,8 @@
 ** TODO Multi-Platform compliant
 ** TODO Build system
 *** TODO avoid patching sub-modules
-*** TODO don't rebuild everything
+*** DONE don't rebuild everything
+    CLOSED: [2020-12-05 Sat 19:02]
 
 
 * TODO Features
