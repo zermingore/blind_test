@@ -1,8 +1,8 @@
 #include <future>
 
 #include <tools/Debug.hh>
-#include "InputsManager.hh"
-#include "GraphicsEngine.hh"
+#include <InputsManager.hh>
+#include <GraphicsEngine.hh>
 
 
 int main()

@@ -5,10 +5,10 @@
  * \brief GraphicsEngine class definition
  */
 
-#include "GraphicsEngine.hh"
+#include <GraphicsEngine.hh>
 
-#include "imgui.h"
-#include "imgui-SFML.h"
+#include <imgui.h>
+#include <imgui-SFML.h>
 
 #include <SFML/Graphics/RenderWindow.hpp>
 #include <SFML/Graphics/CircleShape.hpp>
