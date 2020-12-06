@@ -98,6 +98,16 @@ void GraphicsEngine::drawScene()
       if (event.type == sf::Event::Closed)
       {
         _window->close();
+        exitRequest();
+      }
+
+      if (event.type == sf::Event::KeyPressed)
+      {
+        if (event.key.code == sf::Keyboard::Escape)
+        {
+          _window->close();
+          exitRequest();
+        }
       }
     }
 
