@@ -1,7 +1,14 @@
-#!/bin/sh
+#!/bin/bash
 
 
 git submodule update --init
 
-cd lib/imgui
-git am ../0001-Libs-Added-imgui-sfml-bindings-in-imgui.patch
+pushd lib/imgui
+  git am ../0001-Libs-Added-imgui-sfml-bindings-in-imgui.patch
+popd
+
+mkdir -p build
+  pushd build
+  cmake ..
+  make
+popd
