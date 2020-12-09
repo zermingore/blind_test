@@ -1,6 +1,9 @@
 blind_test
 imgui.ini
 
+# Temporaries
+LOG*
+
 # Editors
 .vscode
 
@@ -9,3 +12,4 @@ cmake_install.cmake
 CMakeFiles/
 CMakeCache.txt
 Makefile
+libimgui.a
