@@ -7,8 +7,7 @@
 
 #include <GraphicsEngine.hh>
 
-#include <imgui.h>
-#include <imgui-SFML.h>
+#include <imgui.hh>
 
 #include <SFML/Graphics/RenderWindow.hpp>
 #include <SFML/Graphics/CircleShape.hpp>
