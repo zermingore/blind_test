@@ -7,6 +7,7 @@
 
 #include <GraphicsEngine.hh>
 
+#include <cmath>
 #include <imgui.hh>
 
 #include <SFML/Graphics/RenderWindow.hpp>
@@ -79,7 +80,6 @@ void GraphicsEngine::drawScene()
 
   sf::Color bgColor = { 0, 255, 0 };
   sf::Color focusPointColor = { 255, 0, 0 };
-  sf::Vector2f focusPointPos = { 30.f, 30.f };
 
   float color[3] = { 0.f, 1.f, 0.f };
   float colorPoint[3] = { 1.f, 0.f, 0.f };
@@ -112,8 +112,10 @@ void GraphicsEngine::drawScene()
 
     focusPoint.setFillColor(focusPointColor);
     focusPoint.setPosition(
-      static_cast<int> (focusPoint.getPosition().y + pointSpeed) % _window->getSize().x,
-      static_cast<int> (focusPoint.getPosition().y + pointSpeed) % _window->getSize().y);
+      static_cast<float> (std::fmod(
+        focusPoint.getPosition().y + pointSpeed, _window->getSize().x)),
+      static_cast<float> (std::fmod(
+        focusPoint.getPosition().y + pointSpeed, _window->getSize().y)));
     focusPoint.setRadius(pointSize);
 
 
