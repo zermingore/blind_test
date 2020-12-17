@@ -13,6 +13,7 @@ set(SRC
   src/main.cc
   src/tools/Debug.cc
   src/tools/Random.cc
+  src/tools/OptionsParser.cc
   src/GraphicsEngine.cc
   src/InputsManager.cc
 )
