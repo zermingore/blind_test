@@ -25,6 +25,9 @@ public:
    */
   static void init();
 
+  /**
+   * \brief _randomSeed getter
+   */
   static auto seed() { return _randomSeed; }
 
   /**

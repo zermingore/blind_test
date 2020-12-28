@@ -27,11 +27,7 @@ bool GraphicsEngine::_exit;
 
 void GraphicsEngine::run()
 {
-  sf::VideoMode video_mode;
-  video_mode.width = 800;
-  video_mode.height = 600;
-  video_mode.bitsPerPixel = 32;
-
+  sf::VideoMode video_mode(800, 600, 32);
   if (!video_mode.isValid())
   {
     // ERROR("Unsupported Video Mode, falling back");
@@ -42,20 +38,16 @@ void GraphicsEngine::run()
   }
 
   _window = std::make_unique<sf::RenderWindow> (video_mode, "Blind Test");
-
   _window->setFramerateLimit(60);
   _window->setKeyRepeatEnabled(false);
   _window->setVerticalSyncEnabled(true);
-
   ImGui::SFML::Init(*_window);
-
   _window->setActive();
-  _exit = false;
 
-  using namespace std::chrono;
+  _exit = false;
   while (_window->isOpen() && !_exit)
   {
-    auto graphics_start(steady_clock::now());
+    auto graphics_start(std::chrono::steady_clock::now());
     //drawBackground();
     drawScene();
 

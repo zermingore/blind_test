@@ -1,7 +1,7 @@
 /**
  * \file
  * \date December 3, 2020
- * \author Zermingore
+ * \author JP
  * \brief Random class definition
  */
 
@@ -16,6 +16,7 @@ std::unique_ptr<std::mt19937> Random::_generator;
 
 void Random::init()
 {
+/// \todo Cross-platform warning ignore
 # pragma GCC diagnostic push // random_device and mt19937 are 5k on my machine
 # pragma GCC diagnostic ignored "-Wlarger-than="
   std::random_device rd;
