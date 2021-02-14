@@ -37,7 +37,7 @@ OptionsParser::OptionsParser(int ac, const char** av)
     "help",
     Option("help",
            "Show this help",
-           { "-h", "--help" },
+           { "-h", "--help", "/h", "/?", "/help" },
            e_option_argument::NONE
     )
   );
@@ -46,7 +46,7 @@ OptionsParser::OptionsParser(int ac, const char** av)
     "version",
     Option("version",
            "Display " + _av[0] + " version",
-           { "-v", "--version" },
+           { "-v", "--version", "/v", "/version" },
            e_option_argument::NONE
     )
   );
@@ -56,7 +56,7 @@ OptionsParser::OptionsParser(int ac, const char** av)
     Option("random-seed",
            "Initialize the random generator with the given seed;"
            " --random-seed=123456789",
-           { "", "--random-seed" },
+           { "", "--random-seed", "/random-seed" },
            e_option_argument::REQUIRED
     )
   );
@@ -65,7 +65,7 @@ OptionsParser::OptionsParser(int ac, const char** av)
     "fullscreen",
     Option("fullscreen",
            "Launch the binary in full screen",
-           { "-f", "--fullscreen", "--full-screen" },
+           { "-f", "--fullscreen", "--full-screen", "/f", "/fullscreen" },
            e_option_argument::NONE
     )
   );
